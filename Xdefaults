@@ -1,0 +1,18 @@
+
+*VT100*utf8: 		1
+*VT100*eightBitInput: 	false
+*VT100*eightBitControl: false
+*VT100*eightBitOutput: 	true
+
+Emacs*background: black
+Emacs*foreground: white
+Emacs.toolBar: 0
+Emacs.ScrollBars: off
+
+xterm*loginShell: true
+
+aterm*font:      fixed
+aterm*scrollBar: false
+
+x-terminal-emulator*font:      fixed
+x-terminal-emulator*scrollBar: false

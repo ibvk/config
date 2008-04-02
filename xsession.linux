@@ -1,0 +1,16 @@
+#!/bin/bash
+
+if [ -f $HOME/.Xdefaults ]
+then
+	xrdb -merge ${HOME}/.Xdefaults
+fi
+
+if [ -f $HOME/.xmodmaprc ]
+then
+	xmodmap ${HOME}/.xmodmaprc
+fi
+
+PATH=$PATH:/usr/local/bin:$HOME/bin
+export PATH
+
+xmonad

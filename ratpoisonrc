@@ -1,0 +1,4 @@
+set font fixed
+bind c exec xterm
+
+exec rpws init 6 -k
