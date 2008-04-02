@@ -1,0 +1,5 @@
+;; .emacs
+
+;; Emacs configuration file
+(load (expand-file-name "~/config/emacs/emacs.el"))
+
