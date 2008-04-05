@@ -1,18 +1,18 @@
 !
 ! Make CapsLock an extra Control
 !
-remove Lock = Caps_Lock
-add Control = Caps_Lock
+! remove Lock = Caps_Lock
+! add Control = Caps_Lock
 
 !
 ! Swap CapsLock and Control_L
 !
-! remove Lock = Caps_Lock
-! remove Control = Control_L
-! keysym Control_L = Caps_Lock
-! keysym Caps_Lock = Control_L
-! add Lock = Caps_Lock
-! add Control = Control_L
+remove Lock = Caps_Lock
+remove Control = Control_L
+keysym Control_L = Caps_Lock
+keysym Caps_Lock = Control_L
+add Lock = Caps_Lock
+add Control = Control_L
 
 !
 ! Make Alt and Meta as mod1 and Super as mod4
