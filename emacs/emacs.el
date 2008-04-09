@@ -55,18 +55,13 @@
 ;; (setq default-frame-alist               '((font . "fixed")))
 
 (if (eq window-system 'mac)
-    (load "~/config/emacs/mac.el")
-  (load "~/config/emacs/x11.el"))
+    (load "~/config/emacs/my-mac.el")
+  (load "~/config/emacs/my-x11.el"))
 
 ;;
 ;; cscope for emacs
 ;;
 (require 'xcscope)
-
-(defun my-cscope-select-entry-same-window ()
-  (interactive)
-  (cscope-select-entry-specified-window (selected-window)))
-(define-key cscope-list-entry-keymap "o" 'my-cscope-select-entry-same-window)
 
 ;;
 ;; Adaptive fill mode
