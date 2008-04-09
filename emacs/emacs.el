@@ -41,9 +41,7 @@
 (blink-cursor-mode 0)
 (menu-bar-mode 0)
 
-(require 'uniquify)
-(setq uniquify-buffer-name-style 'forward)
-
+(load "~/config/emacs/my-uniquify.el")
 (load "~/config/emacs/my-iswitchb.el")
 (load "~/config/emacs/bvk.el")
 (load "~/config/emacs/tramp.el")
