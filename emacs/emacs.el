@@ -54,9 +54,10 @@
 ;;       '((font . "-*-lucidatypewriter-medium-*-*-*-12-*-*-*-*-*-*-*")))
 ;; (setq default-frame-alist               '((font . "fixed")))
 
-(if (eq window-system 'mac)
-    (load "~/config/emacs/my-mac.el")
-  (load "~/config/emacs/my-x11.el"))
+(cond ((eq window-system 'mac) (load "~/config/emacs/my-mac.el"))
+      ((eq window-system 'x)   (load "~/config/emacs/my-x11.el"))
+      ((eq window-system nil)  (load "~/config/emacs/my-term.el"))
+      (t                       (message "unknown window-system type")))
 
 ;;
 ;; cscope for emacs
