@@ -40,6 +40,7 @@
 (tool-bar-mode -1)
 (blink-cursor-mode 0)
 (menu-bar-mode 0)
+(which-function-mode 1)
 
 (load "~/config/emacs/my-uniquify.el")
 (load "~/config/emacs/my-iswitchb.el")
