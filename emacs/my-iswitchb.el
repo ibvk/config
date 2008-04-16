@@ -1,5 +1,5 @@
 (require 'iswitchb)
-(iswitchb-default-keybindings)
+(iswitchb-mode)
 
 (defun iswitchb-local-keys ()
   (mapc (lambda (K)
