@@ -40,34 +40,23 @@
 (tool-bar-mode -1)
 (blink-cursor-mode 0)
 (menu-bar-mode 0)
+(which-function-mode 1)
 
-(require 'uniquify)
-(setq uniquify-buffer-name-style 'forward)
-
+(load "~/config/emacs/my-uniquify.el")
+(load "~/config/emacs/my-iswitchb.el")
 (load "~/config/emacs/bvk.el")
 (load "~/config/emacs/tramp.el")
 (load "~/config/emacs/my-elisp/mail-config.el")
 
-;;
-;; use lucidatypewriter font
-;;
-;; (setq default-frame-alist
-;;       '((font . "-*-lucidatypewriter-medium-*-*-*-12-*-*-*-*-*-*-*")))
-;; (setq default-frame-alist               '((font . "fixed")))
-
-(if (eq window-system 'mac)
-    (load "~/config/emacs/mac.el")
-  (load "~/config/emacs/x11.el"))
+(cond ((eq window-system 'mac) (load "~/config/emacs/my-mac.el"))
+      ((eq window-system 'x)   (load "~/config/emacs/my-x11.el"))
+      ((eq window-system nil)  (load "~/config/emacs/my-term.el"))
+      (t                       (message "unknown window-system type")))
 
 ;;
 ;; cscope for emacs
 ;;
 (require 'xcscope)
-
-(defun my-cscope-select-entry-same-window ()
-  (interactive)
-  (cscope-select-entry-specified-window (selected-window)))
-(define-key cscope-list-entry-keymap "o" 'my-cscope-select-entry-same-window)
 
 ;;
 ;; Adaptive fill mode
@@ -94,26 +83,6 @@
 (add-hook 'mail-setup-hook 'mail-abbrevs-setup)
 
 ;;
-;; Load Collection of Emacs Developement Environment Tools (CEDET)
-;;
-;; (load-file "~/etc/emacs/cedet-1.0pre3/common/cedet.el")
-
-;; Enabling various SEMANTIC minor modes.  See semantic/INSTALL for more ideas.
-;; Select one of the following
-;; (semantic-load-enable-code-helpers)
-;; (semantic-load-enable-guady-code-helpers)
-;; (semantic-load-enable-excessive-code-helpers)
-
-;; Enable this if you develop in semantic, or develop grammars
-;; (semantic-load-enable-semantic-debugging-helpers)
-
-;;
-;; Load Emacs Code Browser (ECB)
-;;
-;; (add-to-list 'load-path "~/etc/emacs/ecb-2.32")
-;; (require 'ecb)
-
-;;
 ;; Rectangle Region Marking
 ;;
 (global-set-key (kbd "C-x r C-SPC") 'rm-set-mark)
@@ -128,13 +97,6 @@
   "Kill a rectangular region and save it in the kill ring." t)
 (autoload 'rm-kill-ring-save "rect-mark"
   "Copy a rectangular region to the kill ring." t)
-
-;;
-;; Disable C-d in shell buffers
-;;
-(add-hook 'comint-mode-hook (lambda ()
-			      (define-key comint-mode-map "\C-d" nil)))
-
 
 ;;
 ;; Org-mode
