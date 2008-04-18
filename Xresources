@@ -9,10 +9,5 @@ Emacs*foreground: white
 Emacs.toolBar: 0
 Emacs.ScrollBars: off
 
-xterm*loginShell: true
-
-aterm*font:      fixed
-aterm*scrollBar: false
-
 x-terminal-emulator*font:      fixed
 x-terminal-emulator*scrollBar: false
