@@ -4,7 +4,7 @@
 (defun iswitchb-local-keys ()
   (mapc (lambda (K)
 	  (let* ((key (car K)) (fun (cdr K)))
-	    (define-key iswitchb-mode-map (edmacro-parse-keys key) fun)))
+	    (define-key iswitchb-mode-map key fun)))
 	'(("<right>" . iswitchb-next-match)
 	  ("<left>"  . iswitchb-prev-match)
 	  ("<up>"    . ignore             )
