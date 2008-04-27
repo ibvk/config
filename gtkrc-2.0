@@ -1,0 +1,4 @@
+include "/usr/share/themes/Default/gtk/gtkrc"
+
+gtk-font-name = "dejavu sans 7"
+
