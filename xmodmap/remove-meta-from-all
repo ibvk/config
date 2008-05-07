@@ -1,0 +1,5 @@
+!
+! Remove Meta_L keymap from any
+!
+keysym Super_L = Super_L
+keysym Alt_L = Alt_L

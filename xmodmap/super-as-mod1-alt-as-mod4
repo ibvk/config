@@ -1,5 +1,5 @@
 !
-! Swap Super_L with Alt_L
+! Map mod1 to Super_L and mod4 to Alt_L
 |
 add mod1 = Super_L
 add mod4 = Alt_L
