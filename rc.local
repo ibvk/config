@@ -1,0 +1,13 @@
+#!/bin/bash
+
+#
+# Set minimum fan speed to 4K
+#
+modprobe applesmc && echo 4000 > /sys/devices/platform/applesmc.768/fan1_min
+
+#
+# Sleep on 1 min or 5 mins of inactivity for battery or AC modes respectively
+#
+# sleepd -s pm-suspend -u 60 -U 300 -i 18 -i 19
+
+
