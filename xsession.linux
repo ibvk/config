@@ -1,6 +1,6 @@
 #!/bin/bash
 
-HOST=`hostname`
+HOST=`hostname -s`
 
 xrdb -merge ${HOME}/config/Xresources
 xmodmap ${HOME}/config/xmodmap/${HOST}.internal
