@@ -1,14 +1,9 @@
 #!/bin/bash
 
-if [ -f $HOME/.Xdefaults ]
-then
-	xrdb -merge ${HOME}/.Xdefaults
-fi
+HOST=`hostname`
 
-if [ -f $HOME/.xmodmaprc ]
-then
-	xmodmap ${HOME}/.xmodmaprc
-fi
+xrdb -merge ${HOME}/config/Xresources
+xmodmap ${HOME}/config/xmodmap/${HOST}.internal
 
 PATH=$PATH:/usr/local/bin:$HOME/bin
 export PATH
