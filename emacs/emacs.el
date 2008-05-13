@@ -44,6 +44,7 @@
 
 (load "~/config/emacs/my-uniquify.el")
 (load "~/config/emacs/my-iswitchb.el")
+(load "~/config/emacs/my-keybindings.el")
 (load "~/config/emacs/bvk.el")
 (load "~/config/emacs/tramp.el")
 (load "~/config/emacs/my-elisp/mail-config.el")
