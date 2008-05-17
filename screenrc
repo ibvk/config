@@ -74,7 +74,8 @@ termcapinfo xterm*|rxvt*|kterm*|Eterm* hs:ts=\E]0;:fs=\007:ds=\E]0;\007
 # windownames and highlighting the current windowname in blue. (This is only
 # enabled if there is no hardstatus setting for your terminal)
 #
-hardstatus lastline "%-Lw%{= BW}%50>%n%f* %t%{-}%+Lw%<"
+# hardstatus lastline "%-Lw%{= BW}%50>%n%f* %t%{-}%+Lw%<"
+hardstatus ignore
 
 # set these terminals up to be 'optimal' instead of vt100
 termcapinfo xterm*|linux*|rxvt*|Eterm* OP
