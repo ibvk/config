@@ -42,6 +42,8 @@
 (menu-bar-mode 0)
 (which-function-mode 1)
 
+(setq-default indent-tabs-mode nil)
+
 (load "~/config/emacs/my-uniquify.el")
 (load "~/config/emacs/my-iswitchb.el")
 (load "~/config/emacs/my-keybindings.el")
