@@ -64,9 +64,9 @@ bind } history
 termcapinfo vt100 dl=5\E[M
 
 # turn sending of screen messages to hardstatus off
-hardstatus on
+hardstatus off
 # Set the hardstatus prop on gui terms to set the titlebar/icon title
-termcapinfo xterm*|rxvt*|kterm*|Eterm* hs:ts=\E]0;:fs=\007:ds=\E]0;\007
+termcapinfo screen*|xterm*|rxvt*|kterm*|Eterm* hs:ts=\E]0;:fs=\007:ds=\E]0;\007
 # use this for the hard status string
 # hardstatus string "Screen %n"
 
@@ -75,7 +75,7 @@ termcapinfo xterm*|rxvt*|kterm*|Eterm* hs:ts=\E]0;:fs=\007:ds=\E]0;\007
 # enabled if there is no hardstatus setting for your terminal)
 #
 # hardstatus lastline "%-Lw%{= BW}%50>%n%f* %t%{-}%+Lw%<"
-hardstatus ignore
+hardstatus alwaysignore
 
 # set these terminals up to be 'optimal' instead of vt100
 termcapinfo xterm*|linux*|rxvt*|Eterm* OP
