@@ -1,16 +1,24 @@
-# ~/.bash_profile: executed by bash(1) for login shells.
-# see /usr/share/doc/bash/examples/startup-files for examples.
-# the files are located in the bash-doc package.
+#
+# Extensions to $PATH
+#
+PATH=$PATH:/usr/local/bin
 
-# the default umask is set in /etc/login.defs
-#umask 022
-
-# include .bashrc if it exists
-if [ -f ~/.bashrc ]; then
-    . ~/.bashrc
+if [ -d $HOME/bin ]; then
+    PATH=$HOME/bin:$PATH
 fi
 
-# set PATH so it includes user's private bin if it exists
-if [ -d ~/bin ] ; then
-    PATH=~/bin:"${PATH}"
+if [ -d $HOME/tools ]; then
+    PATH=$HOME/tools:$PATH
 fi
+
+export PATH
+
+HOST=`hostname -s`
+
+#
+# Load bashrc 
+#
+if [ -f $HOME/config/bashrc.$HOST ]; then
+    . $HOME/config/bashrc.$HOST
+fi
+
