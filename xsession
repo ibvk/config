@@ -1,12 +1,19 @@
 #!/bin/bash
 
-KERNEL=`uname -s`
-
-if [ "$KERNEL" = "Linux" ]
-then
-    sh $HOME/config/xsession.linux
-
-elif [ "$KERNEL" = "Darwin" ]
-then
-    sh $HOME/config/xsession.darwin
+#
+# OS specific xsession customizations
+#
+OS=`uname -s`
+if [ -f $HOME/config/$OS.xsession ]; then
+    sh $HOME/config/$OS.xsession
 fi
+
+#
+# Hostname specific xsession customizations
+#
+HOST=`hostname -s`
+
+if [ -f $HOME/config/$HOST.xsession ]; then
+    sh $HOME/config/$HOST.xsession
+fi
+
