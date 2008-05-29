@@ -18,7 +18,7 @@ HOST=`hostname -s`
 #
 # Load bashrc 
 #
-if [ -f $HOME/config/bashrc.$HOST ]; then
-    . $HOME/config/bashrc.$HOST
+if [ -f $HOME/config/$HOST.bashrc ]; then
+    . $HOME/config/$HOST.bashrc
 fi
 
