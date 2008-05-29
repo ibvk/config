@@ -1,13 +1,16 @@
-
 *VT100*utf8: 		1
 *VT100*eightBitInput: 	false
 *VT100*eightBitControl: false
 *VT100*eightBitOutput: 	true
 
-Emacs*background: black
-Emacs*foreground: white
+*background: #3f3f3f
+*foreground: #dcdccc
+
+XTerm*background: #3f3f3f
+XTerm*foreground: #dcdccc
+UXTerm*background: #3f3f3f
+UXTerm*foreground: #dcdccc
+
 Emacs.toolBar: 0
 Emacs.ScrollBars: off
 
-x-terminal-emulator*font:      fixed
-x-terminal-emulator*scrollBar: false
