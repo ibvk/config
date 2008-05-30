@@ -4,9 +4,11 @@
 *VT100*eightBitControl: false
 *VT100*eightBitOutput: 	true
 
-Emacs*background: black
-Emacs*foreground: white
-Emacs.toolBar: 0
+*background: #3f3f3f
+*foreground: #dcdccc
+
+Emacs.font:       fixed
+Emacs.toolBar:    0
 Emacs.ScrollBars: off
 
 x-terminal-emulator*font:      fixed
