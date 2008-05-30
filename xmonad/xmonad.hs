@@ -3,7 +3,7 @@ import XMonad.Layout.Tabbed
 import XMonad.Layout.NoBorders
 import XMonad.Layout.Roledex
 
-myLayouts = noBorders (tabbed shrinkText defaultTConf)
+myLayouts = noBorders (tabbed shrinkText defaultTheme)
 
 main = xmonad defaultConfig {
        	      layoutHook = myLayouts,
