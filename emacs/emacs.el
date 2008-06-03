@@ -49,7 +49,7 @@
 (load "~/config/emacs/my-keybindings.el")
 (load "~/config/emacs/bvk.el")
 (load "~/config/emacs/tramp.el")
-(load "~/config/emacs/my-elisp/mail-config.el")
+;;(load "~/config/emacs/my-elisp/mail-config.el")
 
 (cond ((eq window-system 'mac) (load "~/config/emacs/my-mac.el"))
       ((eq window-system 'x)   (load "~/config/emacs/my-x11.el"))
