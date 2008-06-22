@@ -41,6 +41,7 @@
 (blink-cursor-mode 0)
 (menu-bar-mode 0)
 (which-function-mode 1)
+(desktop-save-mode 1)
 
 (setq-default indent-tabs-mode nil)
 
