@@ -1,0 +1,20 @@
+add Control = Caps_Lock
+!
+! clear all modifiers
+!
+clear mod1
+clear mod2
+clear mod3
+clear mod4
+clear mod5
+!
+! Remove Meta_L keymap from any
+!
+keysym Super_L = Super_L
+keysym Alt_L = Alt_L
+add mod1 = Super_L
+add mod4 = Alt_L
+!
+! Meta from Super_L
+!
+keysym Super_L = Meta_L Super_L
