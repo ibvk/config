@@ -1,4 +1,4 @@
-include "/usr/share/themes/Default/gtk/gtkrc"
+include "/usr/share/themes/Clearlooks/gtk-2.0/gtkrc"
 
 gtk-font-name = "dejavu sans 7"
 
