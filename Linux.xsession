@@ -16,6 +16,7 @@ PATH=$PATH:/usr/local/bin:$HOME/bin
 export PATH
 
 xmonad &
+sudo sh ${HOME}/config/scripts/dzen2.sh &
 
 # Wait for xsession kill request
 wait $XSESSION
