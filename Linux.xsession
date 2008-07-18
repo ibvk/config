@@ -9,6 +9,7 @@ cat $HOME/.p & export XSESSION=$!
 
 HOST=`hostname -s`
 
+xsetroot -solid '#3f3f3f'
 xrdb -merge ${HOME}/config/Xresources
 xmodmap ${HOME}/config/xmodmap/${HOST}.xmodmaprc
 
