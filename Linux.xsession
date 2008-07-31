@@ -1,11 +1,11 @@
 #!/bin/bash
 
-if [ ! -e $HOME/.p ]; then
-    mkfifo $HOME/.p
+if [ ! -e $HOME/.pipe ]; then
+    mkfifo $HOME/.pipe
 fi
 
 # This 'cat' keeps the xsession alive until killed
-cat $HOME/.p & export XSESSION=$!
+cat $HOME/.pipe & export XSESSION=$!
 
 HOST=`hostname -s`
 
