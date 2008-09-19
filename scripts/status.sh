@@ -19,6 +19,9 @@ do
     ETH0=`/sbin/ifconfig eth0|grep 'addr:[0-9]'|sed 's/^.*addr\:\([^ ]*\).*$/\1/'`
     test -n "$ETH0" && STATUS="ETH $ETH0 $STATUS"
 
+    WLAN0=`/sbin/ifconfig wlan0|grep 'addr:[0-9]'|sed 's/^.*addr\:\([^ ]*\).*$/\1/'`
+    test -n "$WLAN0" && STATUS="WLAN $WLAN0 $STATUS"
+
     echo "$STATUS"
     sleep 5
 done
