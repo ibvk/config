@@ -1,0 +1,13 @@
+auto lo eth0 wlan0
+allow-hotplug eth0 wlan0
+
+iface lo inet loopback
+
+iface eth0 inet dhcp
+
+iface wlan0 inet dhcp
+    wireless-essid      sandini
+    wireless-mode       managed
+    wireless-key1       D1B6-8B34-B1
+    wireless-defaultkey 1
+    wireless-keymode    restricted
