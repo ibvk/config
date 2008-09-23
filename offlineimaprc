@@ -1,0 +1,34 @@
+[general]
+accounts = Groups, Personal
+
+[Account Groups]
+localrepository = GroupsLocal
+remoterepository = GroupsRemote
+
+[Repository GroupsLocal]
+type = Maildir
+localfolders = ~/Mail/groups
+
+[Repository GroupsRemote]
+type = Gmail
+remoteuser = bvk.groups@gmail.com
+
+[Account Personal]
+localrepository = PersonalLocal
+remoterepository = PersonalRemote
+
+[Repository PersonalLocal]
+type = Maildir
+localfolders = ~/Mail/personal
+
+[Repository PersonalRemote]
+type = Gmail
+remoteuser = bvkchaitanya@gmail.com
+
+[mbnames]
+enabled = yes
+filename = ~/Mail/muttrc.mailboxes
+header = "mailboxes"
+peritem = "+%(accountname)s/%(foldername)s"
+sep = " "
+footer = "\n"
