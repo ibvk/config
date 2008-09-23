@@ -1,0 +1,13 @@
+# set realname='BVK Chaitanya'
+
+# set folder="~/Mail/groups"
+# set mbox_type=Maildir
+# set spoolfile="+INBOX"
+
+# set mbox="+received"
+# set postponed="+postponed"
+
+# set edit_headers
+# set use_from=yes
+# set envelope_from=yes
+

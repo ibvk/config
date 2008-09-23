@@ -1,0 +1,16 @@
+set realname='BVK Chaitanya'
+set from = "bvkchaitanya@gmail.com"
+
+set imap_user = "bvkchaitanya@gmail.com"
+set smtp_url  = "smtp://bvkchaitanya@gmail.com@smtp.gmail.com:587/"
+
+set folder = "imaps://imap.gmail.com:993"
+set spoolfile = "+INBOX"
+
+set header_cache=~/Mail/cache.personal/headers
+set message_cachedir=~/Mail/cache.personal/messages
+set certificate_file=~/Mail/certs
+
+set move = no
+
+
