@@ -1,6 +1,8 @@
 [general]
 accounts = Groups, Personal
 
+metadata = ~/Mail/offlineimap
+
 [Account Groups]
 localrepository = GroupsLocal
 remoterepository = GroupsRemote
@@ -12,6 +14,7 @@ localfolders = ~/Mail/groups
 [Repository GroupsRemote]
 type = Gmail
 remoteuser = bvk.groups@gmail.com
+folderfilter = lambda foldername: foldername in ['INBOX']
 
 [Account Personal]
 localrepository = PersonalLocal
@@ -24,11 +27,12 @@ localfolders = ~/Mail/personal
 [Repository PersonalRemote]
 type = Gmail
 remoteuser = bvkchaitanya@gmail.com
+folderfilter = lambda foldername: foldername in ['INBOX']
 
-[mbnames]
-enabled = yes
-filename = ~/Mail/muttrc.mailboxes
-header = "mailboxes"
-peritem = "+%(accountname)s/%(foldername)s"
-sep = " "
-footer = "\n"
+# [mbnames]
+# enabled = yes
+# filename = ~/Mail/muttrc.mailboxes
+# header = "mailboxes"
+# peritem = " +%(accountname)s/%(foldername)s"
+# sep = " "
+# footer = "\n"
