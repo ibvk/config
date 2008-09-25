@@ -1,16 +1,14 @@
-set realname='BVK Chaitanya'
-set from = "bvk.groups@gmail.com"
+unmy_hdr *
+my_hdr Cc: bvk.groups@gmail.com
 
-set imap_user = "bvk.groups@gmail.com"
-set smtp_url  = "smtp://bvk.groups@gmail.com@smtp.gmail.com:587/"
+set from="bvk.groups@gmail.com"
+set smtp_url="smtp://bvk.groups@gmail.com@smtp.gmail.com:587/"
 
-set folder = "imaps://imap.gmail.com:993"
-set spoolfile = "+INBOX"
+# set imap_user = "bvk.groups@gmail.com"
+# set folder = "imaps://imap.gmail.com:993"
+# set spoolfile = "+INBOX"
 
-set header_cache=~/Mail/cache.groups/headers
-set message_cachedir=~/Mail/cache.groups/messages
-set certificate_file=~/Mail/certs
-
-set move = no
-
+# set header_cache=~/Mail/cache.groups/headers
+# set message_cachedir=~/Mail/cache.groups/messages
+# set certificate_file=~/Mail/certs
 

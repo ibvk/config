@@ -1,13 +1,18 @@
-# set realname='BVK Chaitanya'
+set realname='BVK Chaitanya'
 
-# set folder="~/Mail/groups"
-# set mbox_type=Maildir
-# set spoolfile="+INBOX"
+set folder="~/Mail"
+set spoolfile="+groups/INBOX"
+mailboxes "+groups/INBOX" "+personal/INBOX"
 
-# set mbox="+received"
-# set postponed="+postponed"
+folder-hook groups   "source ~/.mutt/groups"
+folder-hook personal "source ~/.mutt/personal"
 
-# set edit_headers
-# set use_from=yes
-# set envelope_from=yes
+set mbox="+received"
+set record="+sent"
+set postponed="+postponed"
 
+set edit_headers
+set use_from=yes
+set envelope_from=yes
+
+set move=no
