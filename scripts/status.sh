@@ -4,7 +4,7 @@ while true
 do
     STATUS=
 
-    DATE=`date +'%A %b %d %H:%M'`
+    DATE=`date +'%A %b %d %l:%M'`
     test -n "$DATE" && STATUS="$DATE $STATUS"
 
     HDDTEMP=`hddtemp /dev/sda | cut -d' ' -f3 | sed -e 's/[^0-9\.]//g'`
