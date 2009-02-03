@@ -2,6 +2,7 @@
 #
 # Disable cdrom drive
 #
-blacklist sr_mod
 blacklist cdrom
-blacklist ide-cd
+blacklist ide-cd-mod
+
+
