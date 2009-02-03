@@ -1,22 +1,16 @@
-*font:       10x20
-XTerm*font:  10x20
-UXTerm*font: 10x20
 Emacs.font:  10x20
 
 *background:       #3f3f3f
-*foreground:       #dcdccc
+*foreground:       #ffffff
 XTerm*background:  #3f3f3f
-XTerm*foreground:  #dcdccc
+XTerm*foreground:  #ffffff
 UXTerm*background: #3f3f3f
-UXTerm*foreground: #dcdccc
+UXTerm*foreground: #ffffff
 
 *VT100*utf8: 		1
 *VT100*eightBitInput: 	false
 *VT100*eightBitControl: false
 *VT100*eightBitOutput: 	true
-
-XTerm*sessionMgt:  false
-UXTerm*sessionMgt: false
 
 Emacs.toolBar:    0
 Emacs.ScrollBars: off
