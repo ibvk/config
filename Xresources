@@ -1,4 +1,4 @@
-Emacs.font:  10x20
+Emacs.font: 6x13
 
 *background:       #3f3f3f
 *foreground:       #ffffff
@@ -6,6 +6,11 @@ XTerm*background:  #3f3f3f
 XTerm*foreground:  #ffffff
 UXTerm*background: #3f3f3f
 UXTerm*foreground: #ffffff
+
+XTerm*faceName: Inconsolata
+XTerm*faceSize: 14
+UXTerm*faceName: Inconsolata
+UXTerm*faceSize: 14
 
 *VT100*utf8: 		1
 *VT100*eightBitInput: 	false
