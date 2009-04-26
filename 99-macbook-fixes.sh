@@ -57,6 +57,14 @@ function load_uvcvideo_module
     modprobe uvcvideo
 }
 
+function load_isight_firmware
+{
+    INFO=`lsusb -d 05ac:8300`
+    BUSID=`echo $INFO|cut -f2 -d' '`
+    DEVID=`echo $INFO|cut -f4 -d' '|sed 's/://'`
+    /home/bvk/config/bin/ift-load -f /home/bvk/config/bin/isight.fw -b $BUSID -d $DEVID
+}
+
 function do_suspend
 {
     unload_uvcvideo_module
@@ -69,6 +77,7 @@ function do_resume
     increase_fan_speed
     disable_cdrom
     enable_powertop_suggestions
+    load_isight_firmware
     load_uvcvideo_module
 }
 
@@ -80,6 +89,7 @@ function do_bootup
     increase_fan_speed
     disable_cdrom
     enable_powertop_suggestions
+    load_isight_firmware
 }
 
 if test "$1" == "resume"; then
