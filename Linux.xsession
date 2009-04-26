@@ -9,16 +9,18 @@ xmodmap ${HOME}/config/xmodmap/${HOST}.xmodmaprc
 PATH=$PATH:/usr/local/bin:$HOME/bin
 export PATH
 
-xmonad & WM=$!
+# xmonad & WM=$!
+# awesome & WM=$!
+sawfish & WM=$!
 
-#
-# Status bar pipe keeps the xsession alive
-#
-if [ ! -e $HOME/.status ]; then
-    mkfifo $HOME/.status
-fi
+while true
+do
+    M=`sudo sh $HOME/config/scripts/status.sh`
+    echo $M
+    sleep 5
+done | dzen2 -fn fixed -bg '#3f3f3f' &
 
-sudo sh $HOME/config/scripts/status.sh | dzen2 -fn fixed -bg '#3f3f3f' -fg '#dcdcdc' &
+xterm -g 140x55 &
 
 wait $WM
 pkill dzen2
