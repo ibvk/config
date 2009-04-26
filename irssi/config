@@ -231,7 +231,6 @@ statusbar = {
 settings = {
   core = { real_name = "BVK Chaitanya"; user_name = "bvk"; nick = "bvk"; };
   "fe-text" = { actlist_sort = "refnum"; };
+  "fe-common/core" = { theme = "elho"; };
 };
-ignores = (
-  { level = "JOINS PARTS QUITS NICKS"; }
-);
+ignores = ( { level = "JOINS PARTS QUITS NICKS"; } );
