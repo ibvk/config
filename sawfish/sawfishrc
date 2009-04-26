@@ -1,20 +1,22 @@
 (require 'sawmill-defaults)
+(require 'maximize)
 
-(setq 'workspace-names '("1" "2" "3" "4" "5" "6" "7" "8" "9"))
+(setq default-font (get-font "fixed"))
 
 ;; Keybindings
 
-(bind-keys global-keymap "W-S-q" 'quit)
-(bind-keys global-keymap "W-S-r" 'restart)
+(bind-keys global-keymap "W-Q" 'quit)
+(bind-keys global-keymap "W-R" 'restart)
 
 (bind-keys global-keymap "W-r" '(run-shell-command "gmrun"))
+(bind-keys global-keymap "W-x" '(maximize-window-toggle (input-focus)))
 
-(bind-keys global-keymap "W-1" '(select-workspace-from-first 0))
-(bind-keys global-keymap "W-2" '(select-workspace-from-first 1))
-(bind-keys global-keymap "W-3" '(select-workspace-from-first 2))
-(bind-keys global-keymap "W-4" '(select-workspace-from-first 3))
-(bind-keys global-keymap "W-5" '(select-workspace-from-first 4))
-(bind-keys global-keymap "W-6" '(select-workspace-from-first 5))
-(bind-keys global-keymap "W-7" '(select-workspace-from-first 6))
-(bind-keys global-keymap "W-8" '(select-workspace-from-first 7))
-(bind-keys global-keymap "W-9" '(select-workspace-from-first 8))
+(bind-keys global-keymap "W-1" '(select-workspace 0))
+(bind-keys global-keymap "W-2" '(select-workspace 1))
+(bind-keys global-keymap "W-3" '(select-workspace 2))
+(bind-keys global-keymap "W-4" '(select-workspace 3))
+(bind-keys global-keymap "W-5" '(select-workspace 4))
+(bind-keys global-keymap "W-6" '(select-workspace 5))
+(bind-keys global-keymap "W-7" '(select-workspace 6))
+(bind-keys global-keymap "W-8" '(select-workspace 7))
+(bind-keys global-keymap "W-9" '(select-workspace 8))
