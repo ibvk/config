@@ -1,19 +1,27 @@
 #!/bin/bash
 
-#
-# OS specific xsession customizations
-#
-OS=`uname -s`
-if [ -f $HOME/config/$OS.xsession ]; then
-    sh $HOME/config/$OS.xsession
-fi
-
-#
-# Hostname specific xsession customizations
-#
 HOST=`hostname -s`
 
-if [ -f $HOME/config/$HOST.xsession ]; then
-    sh $HOME/config/$HOST.xsession
-fi
+xsetroot -solid '#3f3f3f'
+xrdb -merge ${HOME}/config/Xresources
+xmodmap ${HOME}/config/xmodmap/${HOST}.xmodmaprc
+
+PATH=$PATH:/usr/local/bin:$HOME/bin
+export PATH
+
+# xmonad & WM=$!
+# awesome & WM=$!
+sawfish & WM=$!
+
+while true
+do
+    M=`sudo sh $HOME/config/scripts/status.sh`
+    echo $M
+    sleep 5
+done | dzen2 -fn fixed -bg '#3f3f3f' &
+
+xterm -g 80x25 &
+
+wait $WM
+pkill dzen2
 
