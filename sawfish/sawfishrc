@@ -10,6 +10,21 @@
 
 (bind-keys global-keymap "W-r" '(run-shell-command "gmrun"))
 (bind-keys global-keymap "W-x" '(maximize-window-toggle (input-focus)))
+(bind-keys global-keymap "W-X" '(maximize-window-vertically-toggle (input-focus)))
+(bind-keys global-keymap "W-z" '(toggle-window-iconified (input-focus)))
+(bind-keys global-keymap "W-S" '(toggle-window-sticky (input-focus)))
+(bind-keys global-keymap "W-I" '(toggle-window-ignored (input-focus)))
+(bind-keys global-keymap "W-w" '(delete-window-safely (input-focus)))
+
+(bind-keys global-keymap "W-!" '(move-window-to-workspace (input-focus) current-workspace 0))
+(bind-keys global-keymap "W-@" '(move-window-to-workspace (input-focus) current-workspace 1))
+(bind-keys global-keymap "W-#" '(move-window-to-workspace (input-focus) current-workspace 2))
+(bind-keys global-keymap "W-$" '(move-window-to-workspace (input-focus) current-workspace 3))
+(bind-keys global-keymap "W-%" '(move-window-to-workspace (input-focus) current-workspace 4))
+(bind-keys global-keymap "W-^" '(move-window-to-workspace (input-focus) current-workspace 5))
+(bind-keys global-keymap "W-&" '(move-window-to-workspace (input-focus) current-workspace 6))
+(bind-keys global-keymap "W-*" '(move-window-to-workspace (input-focus) current-workspace 7))
+(bind-keys global-keymap "W-(" '(move-window-to-workspace (input-focus) current-workspace 8))
 
 (bind-keys global-keymap "W-1" '(select-workspace 0))
 (bind-keys global-keymap "W-2" '(select-workspace 1))
