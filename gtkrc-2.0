@@ -1,5 +1,8 @@
 include "/usr/share/themes/Clearlooks/gtk-2.0/gtkrc"
+include "/usr/share/themes/Emacs/gtk-2.0-key/gtkrc"
 
-gtk-font-name = "dejavu sans 7"
-gtk-key-theme-name = "Emacs"
+gtk-font-name = "DejaVu Sans Semi-Condensed 9"
+
+
+
 
