@@ -14,7 +14,7 @@ function fix_hdd_load_cycles
 
 function fix_fn_key_behavior
 {
-    echo -n 0x02 > /sys/module/hid/parameters/pb_fnmode
+    echo -n 0x02 > /sys/module/hid_apple/parameters/fnmode
 }
 
 function increase_fan_speed
@@ -62,12 +62,28 @@ function load_isight_firmware
     INFO=`lsusb -d 05ac:8300`
     BUSID=`echo $INFO|cut -f2 -d' '`
     DEVID=`echo $INFO|cut -f4 -d' '|sed 's/://'`
-    /home/bvk/config/bin/ift-load -f /home/bvk/config/bin/isight.fw -b $BUSID -d $DEVID
+    if [ -n "$BUSID" -a -n "$DEVID" ]
+    then
+	/home/bvk/config/bin/ift-load -f /home/bvk/config/bin/isight.fw -b $BUSID -d $DEVID
+    fi
+}
+
+function stop_wifi
+{
+    echo ifdown wlan0
+    ifdown wlan0
+}
+
+function start_wifi
+{
+    echo ifup wlan0
+    ifup wlan0
 }
 
 function do_suspend
 {
     unload_uvcvideo_module
+    stop_wifi
 }
 
 function do_resume
@@ -79,6 +95,7 @@ function do_resume
     enable_powertop_suggestions
     load_isight_firmware
     load_uvcvideo_module
+    start_wifi
 }
 
 function do_bootup
